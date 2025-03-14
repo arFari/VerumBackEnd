@@ -1,8 +1,9 @@
 from rest_framework import serializers
-from api.models import Article
+from api.models import News
 
 
-class ArticleSerializer(serializers.ModelSerializer):
+class NewsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Article
+        model = News
         fields = ['id', 'author', 'title', 'description', 'url', 'urlToImage', 'publishedAt', 'content']
+    publishedAt = serializers.DateTimeField(allow_null=True, required=False)

@@ -7,7 +7,7 @@ import json
 app = Flask(__name__)
 
 # Load the local model
-MODEL_PATH = "BiasDetectorModel"  # Ensure this is the correct folder name
+MODEL_PATH = "ROBERTA_MODEL/VERUM_TRAINED_MODEL"  # Ensure this is the correct folder name
 try:
     print("Loading tokenizer...")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)

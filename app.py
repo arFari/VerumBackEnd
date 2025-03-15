@@ -20,7 +20,7 @@ except Exception as e:
     print("Failed to load model or tokenizer:")
     traceback.print_exc()
     raise e  # Stop execution if the model fails to load
-GPT_TOKEN = "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"
+GPT_TOKEN = "INSERT GPT TOKEN HERE"
 # Initialize OpenAI Client
 client = OpenAI(api_key=GPT_TOKEN)  # Ensure your .env file is set correctly
 

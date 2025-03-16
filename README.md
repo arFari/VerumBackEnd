@@ -80,10 +80,10 @@ This combination ensures a comprehensive and accurate analysis of news articles 
 
 5. **Configure API Keys**
 
-    Set your OpenAI API key in your environment. For example, create a `.env` file or export the key directly:
+    Set your OpenAI API key in app.py
 
     ```bash
-    export OPENAI_API_KEY="your-openai-api-key"
+    GPT_TOKEN = "INSERT GPT TOKEN HERE"
     ```
 
 ---

@@ -1,24 +1,24 @@
 # Verum Backend API Documentation
 
-Welcome to the **Verum Backend API** documentation. This guide details the API and model used for analyzing bias in news articles. The backend leverages two advanced AI models—**roBERTa-base** for classification and **GPT-4 Turbo** for detailed analysis—to determine whether an article is biased or unbiased, along with providing key insights, highlighted biased text segments, and explanations.
+Welcome to the **Verum Backend API** documentation. This guide details the Flask-based API and model used for analyzing bias in news articles. The backend integrates two powerful AI models—**roBERTa-base** for classification and **GPT-4 Turbo** for detailed analysis—to determine whether an article is biased or unbiased, along with providing key insights, highlighted biased text segments, and explanations.
 
 ---
 
 ## Overview
 
-The Verum Backend API performs bias detection by combining two complementary approaches:
+The Verum Backend API performs bias detection using a dual-model approach:
 
-- **roBERTa-based Analysis**:  
+- **roBERTa-based Analysis**  
   A fine-tuned version of the [roBERTa-base](https://huggingface.co/FacebookAI/roberta-base) model is used to classify text as biased or unbiased.
 
-- **GPT-4 Turbo Analysis**:  
-  The GPT-4 Turbo API is leveraged to deliver:
+- **GPT-4 Turbo Analysis**  
+  The API leverages the GPT-4 Turbo API to provide:
   - A binary bias indicator.
   - **Keypoints**: Extracted insights from the text.
   - **Biased Text Segments**: Specific parts of the text identified as biased.
-  - **Reason**: A detailed explanation for the bias assessment.
+  - **Reason**: A detailed explanation for the bias determination.
 
-This dual-model approach ensures a comprehensive evaluation of news articles for bias.
+This combination ensures a comprehensive and accurate analysis of news articles for bias.
 
 ---
 
@@ -30,8 +30,8 @@ This dual-model approach ensures a comprehensive evaluation of news articles for
 - **Detailed Reporting**:  
   Returns binary bias indicators along with keypoints, biased text segments, and a thorough explanation of the analysis.
 
-- **FastAPI Powered**:  
-  Built with FastAPI for rapid and asynchronous API responses.
+- **Flask-Powered API**:  
+  The API is built with Flask, making it lightweight and easy to deploy.
 
 - **Seamless Integration**:  
   Designed as a RESTful API that can be easily integrated with your frontend extensions or other applications.
@@ -80,7 +80,7 @@ This dual-model approach ensures a comprehensive evaluation of news articles for
 
 5. **Configure API Keys**
 
-   Set your OpenAI API key in your environment. For example, create a `.env` file or export the key directly:
+    Set your OpenAI API key in your environment. For example, create a `.env` file or export the key directly:
 
     ```bash
     export OPENAI_API_KEY="your-openai-api-key"
@@ -92,7 +92,7 @@ This dual-model approach ensures a comprehensive evaluation of news articles for
 
 ### Running the API Server
 
-Start the FastAPI server by executing:
+The Flask server is started from the `app.py` file. To run the server, execute:
 
 ```bash
-python main.py
+python app.py
